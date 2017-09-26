@@ -62,7 +62,7 @@ public class DealDetailsFragment extends Fragment {
         if (args != null) {
             final DealItem mDealItem = (DealItem) args.getSerializable(DEAL_ITEM);
             if (mDealItem != null) {
-                Picasso.with(getActivity()).load(mDealItem.getImage()).error(R.drawable.image_16200413).into(dealImage);
+                Picasso.with(getActivity()).load(mDealItem.getImage()).placeholder(R.drawable.place_holder).error(R.drawable.place_holder).into(dealImage);
                 dealDiscription.setText(mDealItem.description);
                 dealTitle.setText(mDealItem.title);
                 dealSalePrice.setText(mDealItem.salePrice);

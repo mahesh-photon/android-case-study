@@ -19,7 +19,7 @@
             android:layout_width="@dimen/deal_list_item_image_size"
             android:layout_height="@dimen/deal_list_item_image_size"
             android:contentDescription="@string/product_image_content_description"
-            tool:src="@drawable/image_14741397"/>
+            tool:src="@drawable/place_holder"/>
 
     </LinearLayout>
 
@@ -52,7 +52,7 @@
 
             <TextView
                 android:id="@+id/deal_list_item_price"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:contentDescription="price"
@@ -68,9 +68,8 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:contentDescription="price"
                     android:textSize="18sp"
-                    android:text="Ship"/>
+                    android:text="@string/ship"/>
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -78,20 +77,18 @@
                     android:layout_marginEnd="2dp"
                     android:layout_marginLeft="2dp"
                     android:layout_marginStart="2dp"
-                    android:contentDescription="price"
                     android:textColor="@android:color/darker_gray"
                     android:textSize="18sp"
-                    android:text="or"/>
+                    android:text="@string/or"/>
 
                 <TextView
                     android:id="@+id/aisle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:contentDescription="price"
                     android:background="@drawable/circle_background"
-                    android:textSize="11sp"
+                    android:textSize="12sp"
                     android:gravity="center"
-                    android:text="C1"/>
+                    tool:text="C1"/>
             </LinearLayout>
 
         </LinearLayout>

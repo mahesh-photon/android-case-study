@@ -31,7 +31,7 @@ public class DealController implements OnTaskCompleted {
         if (context != null) {
              if (Utility.isNetworkAvailable(context))
             {
-                controller = new NetController(context, this);
+                controller = new NetController(this);
                 controller.setReqType(NetController.DEAL_LIST_REQUEST);
                 controller.setUrl(Utility.DEAL_URL);
                 controller.execute();

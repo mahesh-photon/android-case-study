@@ -5,13 +5,16 @@ import android.app.FragmentTransaction;
 import android.app.ProgressDialog;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Toast;
 
 import com.target.dealbrowserpoc.dealbrowser.events.DealClickedEvent;
 import com.target.dealbrowserpoc.dealbrowser.events.DealReceivedEvent;
 import com.target.dealbrowserpoc.dealbrowser.events.NoNetworkEvent;
+import com.target.dealbrowserpoc.dealbrowser.fragments.DealCardListFragment;
 import com.target.dealbrowserpoc.dealbrowser.fragments.DealDetailsFragment;
 import com.target.dealbrowserpoc.dealbrowser.fragments.DealListFragment;
 import com.target.dealbrowserpoc.dealbrowser.http.DealController;
@@ -20,6 +23,7 @@ import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
 
 import butterknife.BindBool;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 
 public class MainActivity extends Activity {
@@ -28,6 +32,12 @@ public class MainActivity extends Activity {
     protected boolean portraitOnly;
     @BindBool(R.bool.tablet)
     protected boolean isTablet;
+    @BindBool(R.bool.grid_enable)
+    protected boolean isGridEnabled;
+    @Nullable
+    @BindView(R.id.deal_details_fragment)
+    protected View dealDetailForTablet;
+
     private ProgressDialog loadingDialog;
 
     @Override
@@ -40,8 +50,15 @@ public class MainActivity extends Activity {
             setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         }
         showLoadingDialog();
+        initGridLayoutAdjustment();
         new DealController(this).getDeals();
 
+    }
+
+    private void initGridLayoutAdjustment() {
+        if(dealDetailForTablet != null && isGridEnabled) {
+            dealDetailForTablet.setVisibility(View.GONE);
+        }
     }
 
     @Override
@@ -78,7 +95,7 @@ public class MainActivity extends Activity {
     @Subscribe
     public void onEvent(DealClickedEvent event) {
 
-        if (findViewById(R.id.deal_details_fragment) != null) {
+        if (dealDetailForTablet != null && !isGridEnabled) {
             DealDetailsFragment newFragment = DealDetailsFragment.newInstance(event.getDealItem());
             FragmentTransaction transaction = getFragmentManager().beginTransaction();
 
@@ -100,9 +117,16 @@ public class MainActivity extends Activity {
     public void onEvent(DealReceivedEvent event){
         dismissLoadingDialog();
         if (event.isSuccessful()) {
+
+        if(isGridEnabled) {
+            getFragmentManager().beginTransaction()
+                    .add(R.id.container, DealCardListFragment.newInstance(event.getResponseObject()), "TAG")
+                    .commit();
+        } else {
             getFragmentManager().beginTransaction()
                     .add(R.id.container, DealListFragment.newInstance(event.getResponseObject()), "TAG")
                     .commit();
+        }
         } else {
             Toast.makeText(this, R.string.server_error, Toast.LENGTH_LONG).show();
         }

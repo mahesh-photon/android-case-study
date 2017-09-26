@@ -69,7 +69,7 @@ public class DealListItemAdapter extends BaseAdapter {
             view = convertView;
             holder = (ViewHolder)view.getTag();
         }
-        Picasso.with(context).load(dealItem.getImage()).error(R.drawable.image_16200413).into(holder.productImage);
+        Picasso.with(context).load(dealItem.getImage()).error(R.drawable.place_holder).into(holder.productImage);
         holder.title.setText(dealItem.title);
         holder.price.setText(dealItem.salePrice);
         holder.price.setTextColor(context.getResources().getColor(R.color.red));

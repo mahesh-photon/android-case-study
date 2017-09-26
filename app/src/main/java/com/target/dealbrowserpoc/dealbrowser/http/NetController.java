@@ -33,14 +33,12 @@ public class NetController extends AsyncTask<String, Void, Response> {
     private static final int DEFAULT_CONNECT_TIMEOUT = 10;
     public static final int DEAL_LIST_REQUEST = 0;
     private static final int BUFFER_SIZE = 1024;
-    private final WeakReference<Context> mContext;
     private final OnTaskCompleted mController;
     private String mRequestUrl;
     private Call call;
     private int reqType;
 
-    public NetController(Context context, OnTaskCompleted controller) {
-        this.mContext = new WeakReference<>(context);
+    public NetController(OnTaskCompleted controller) {
         this.mController = controller;
         this.call = null;
     }

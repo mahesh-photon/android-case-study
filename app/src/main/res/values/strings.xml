@@ -8,4 +8,6 @@
     <string name="server_error">Some Error Occurred</string>
     <string name="please_wait">Please Wait</string>
     <string name="loading_deals">Loading Deals</string>
+    <string name="ship">Ship</string>
+    <string name="or">or</string>
 </resources>

@@ -16,7 +16,7 @@
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
-        sha1="4961c023402137cbc97fddd44349c789b2ee8db1">
+        sha1="e6e358c4092e27a169302f36d52155dc6d40433e">
         <dex dex="/Users/mcnaik/Documents/Android Case Study/android-case-study/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_c636020c77ad2b4f85533d111bf2cbed6cd3dd38/classes.dex" />
     </item>
     <item
@@ -39,21 +39,30 @@
     </item>
     <item
         is-multidex="true"
+        jar="/Users/mcnaik/.android/build-cache/9eb012d0c3408d596e58d43f1f21ec82dc9c4f27/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="da27a32db6af8954ee8061537c7d476fcb1df46f">
+        <dex dex="/Users/mcnaik/Documents/Android Case Study/android-case-study/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_34972ecf6cb873ef7401f445940f5b27c7ca7633/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/mcnaik/.android/build-cache/fd5db9cc4f33cdc6d154debeaaa3fc44299b6ca4/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="914f5d3e3ace66080e59613708f06d129a222e25">
+        <dex dex="/Users/mcnaik/Documents/Android Case Study/android-case-study/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_9c64d09fba2829f72b6d9447099bd322e3797be9/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="/Users/mcnaik/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp/3.7.0/6edbebdd8868708db718d15c09c4b28037fd487e/okhttp-3.7.0.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
         sha1="6edbebdd8868708db718d15c09c4b28037fd487e">
         <dex dex="/Users/mcnaik/Documents/Android Case Study/android-case-study/app/build/intermediates/transforms/dex/debug/folders/1000/10/okhttp-3.7.0_095d4b6c5e502f15be0ff526f5dfe6304c8dd070/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/mcnaik/.android/build-cache/7b7106e8afba22d5ddd47c035e51d02802a4b959/output/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="ca3c7aa31e2726a400a6e552b93cb9f63c9a1e6d">
-        <dex dex="/Users/mcnaik/Documents/Android Case Study/android-case-study/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_00462349b2d476b2fd3abcf30daddaf71c2fb8fa/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -66,15 +75,6 @@
     </item>
     <item
         is-multidex="true"
-        jar="/Users/mcnaik/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/25.1.0/support-annotations-25.1.0.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="64cb6b229a8bdfd907bc8dd46839a0053e4c018d">
-        <dex dex="/Users/mcnaik/Documents/Android Case Study/android-case-study/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-25.1.0_8912e5f8c1e285260fe23cd1de98b39a69bd7de7/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
         jar="/Users/mcnaik/.gradle/caches/modules-2/files-2.1/com.squareup.okio/okio/1.12.0/3742beff8024d0a0073d284b7c5e4cbf73d99b25/okio-1.12.0.jar"
         jumboMode="true"
         optimize="true"
@@ -84,12 +84,39 @@
     </item>
     <item
         is-multidex="true"
+        jar="/Users/mcnaik/.android/build-cache/8edfa417e5e2b895b06888e20548e3e67fa00655/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="95519720620b553f63afc789beba9ad582807f7c">
+        <dex dex="/Users/mcnaik/Documents/Android Case Study/android-case-study/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_bd65074d0fc7d87cbe6ae9601b841ee9119fcd1b/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/mcnaik/.android/build-cache/ca790bfd641f16190729a31eca2088210fce7714/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="052f5f840f21174a3ecf6544130194e2652cbb73">
+        <dex dex="/Users/mcnaik/Documents/Android Case Study/android-case-study/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_28187d116b0c7f1438d62c31bb96c521703c48c8/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="/Users/mcnaik/.android/build-cache/b52d6ff75264d19ad13c71d224382bb75d67bae3/output/jars/classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
         sha1="19f281a785ca0eb5f6799fc7bf7ca199a9ca1e8b">
         <dex dex="/Users/mcnaik/Documents/Android Case Study/android-case-study/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_6047376fc69f955da4fbd198dcb9000271e22d83/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/mcnaik/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/25.3.1/support-annotations-25.3.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="bf8841d29fa39e077730e7a91222c2ce269fa7c9">
+        <dex dex="/Users/mcnaik/Documents/Android Case Study/android-case-study/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-25.3.1_158978a4ba357941f76156dc36ff00c9b5d9d463/classes.dex" />
     </item>
     <item
         is-multidex="true"

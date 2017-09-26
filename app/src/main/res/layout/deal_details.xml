@@ -1,91 +1,95 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tool="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
-<LinearLayout android:layout_width="match_parent"
-              android:layout_height="match_parent"
-              android:orientation="vertical">
+             xmlns:tool="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/activity_horizontal_margin"
-        android:gravity="center_horizontal"
-        android:orientation="vertical">
-
-        <ImageView
-            android:id="@+id/deal_deatil_image"
-            android:layout_width="200dp"
-            android:layout_height="200dp"
-            android:contentDescription="@string/product_image_content_description"
-            android:src="@drawable/image_14741397"/>
-    </LinearLayout>
-
-    <ScrollView
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content">
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginStart="20dp"
-        android:layout_weight="1"
+        android:layout_height="match_parent"
         android:orientation="vertical">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/activity_horizontal_margin"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/deal_deatil_sale_price"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text="$8.99"
-                android:textColor="@android:color/holo_red_light"
-                android:textSize="30sp"
-                android:textStyle="bold"/>
-
-            <TextView
-                android:id="@+id/deal_deatil_orginal_price"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:gravity="bottom"
-                android:text="Reg: $8.99"
-                android:textColor="@android:color/darker_gray"
-                android:textSize="20sp"/>
+            <ImageView
+                android:id="@+id/deal_deatil_image"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/deal_detail_image_size"
+                android:contentDescription="@string/product_image_content_description"
+                android:src="@drawable/place_holder"/>
         </LinearLayout>
 
-        <TextView
-            android:id="@+id/deal_deatil_title"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:text="Lace Trim Tiered Cami Black - Xhilaration®"
-            android:textColor="@android:color/black"
-            android:textSize="25sp"/>
 
-        <TextView
-            android:id="@+id/deal_deatil_discription"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="20dp"
-            android:paddingBottom="60dp"
-            android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eget metus id arcu auctor consectetur. Donec vestibulum, justo ut bibendum blandit, tellus nisi laoreet dolor, eget tempor sapien est eu enim. Pellentesque finibus risus ut lacus tristique pulvinar."
-            android:textColor="@android:color/black"
-            android:textSize="15sp"/>
+            android:layout_height="0dp"
+            android:layout_marginEnd="@dimen/padding_20"
+            android:layout_marginLeft="@dimen/padding_20"
+            android:layout_marginStart="@dimen/padding_20"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/deal_deatil_sale_price"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:textColor="@android:color/holo_red_light"
+                    android:textSize="30sp"
+                    android:textStyle="bold"
+                    tool:text="$8.99"/>
+
+                <TextView
+                    android:id="@+id/deal_deatil_orginal_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="bottom"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="20sp"
+                    tool:text="Reg: $8.99"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/deal_deatil_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/padding_20"
+                android:textColor="@android:color/black"
+                android:textSize="25sp"
+                tool:text="Lace Trim Tiered Cami Black - Xhilaration®"/>
+
+            <ScrollView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/padding_60">
+
+                <TextView
+                    android:id="@+id/deal_deatil_discription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/padding_20"
+                    android:textColor="@android:color/black"
+                    android:textSize="15sp"
+                    tool:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eget metus id arcu auctor consectetur. Donec vestibulum, justo ut bibendum blandit, tellus nisi laoreet dolor, eget tempor sapien est eu enim. Pellentesque finibus risus ut lacus tristique pulvinar."/>
+            </ScrollView>
+        </LinearLayout>
+
     </LinearLayout>
 
-</ScrollView>
-
-</LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginTop="10dp"
+        android:layout_height="@dimen/padding_50"
         android:layout_gravity="bottom"
+        android:layout_marginTop="@dimen/padding_10"
         android:orientation="horizontal">
 
         <TextView
@@ -95,8 +99,8 @@
             android:layout_weight="1"
             android:background="@android:color/darker_gray"
             android:gravity="center"
-            android:textSize="18sp"
-            android:text="add to List"/>
+            android:text="add to List"
+            android:textSize="18sp"/>
 
         <TextView
             android:id="@+id/add_to_cart"
@@ -105,9 +109,9 @@
             android:layout_weight="1"
             android:background="@android:color/holo_red_dark"
             android:gravity="center"
+            android:text="add to Cart"
             android:textColor="@android:color/white"
-            android:textSize="18sp"
-            android:text="add to Cart"/>
+            android:textSize="18sp"/>
 
     </LinearLayout>
 </FrameLayout>

@@ -15,8 +15,6 @@ import org.greenrobot.eventbus.EventBus;
 
 import java.util.List;
 
-import butterknife.ButterKnife;
-
 public class DealListFragment extends ListFragment {
 
     private static final String  DEAL_LIST = "DEAL_LIST";
@@ -44,7 +42,7 @@ public class DealListFragment extends ListFragment {
             final DealList dealListObject = (DealList) args.getSerializable(DEAL_LIST);
              dealList = dealListObject.getDealList();
             if (dealList != null) {
-                mDealListItemAdapter = new DealListItemAdapter(getActivity(), dealList);
+                mDealListItemAdapter = DealListItemAdapter.newInstance(getActivity(), dealList);
             }
         }
         setListAdapter(mDealListItemAdapter);
